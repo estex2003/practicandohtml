@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--por ahora no interesa-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--por ahora no interesa-->
+
+    <title>Esteban practica</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid;
+        color: black;
+        width: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>mi primer heading</h1>
+    <!-- titulos para pagina web, ayuda en la busqueda de ususario-->
+    <h2>mi segundo heading</h2>
+    <!--subtitulos-->
+    <h3>mi tercer heading</h3>
+    <h4>mi cuarto</h4>
+    <h5>mi quinto</h5>
+    <h6>mi sexto</h6>
+
+    <p>este es una etiqueta de parrafo, chancoo anda feliz</p>
+
+    <hr />
+    <!--es como una separacion-->
+
+    <p>chanchito anda triste</p>
+    <h2>chanchito feliz</h2>
+    <p>
+      este es un texto <span style="color: blue">mucho mas largo</span> y es
+      para mostrar <br />la etiqueta span
+      <!--span identifica algun texto o etiqueta html dentro de otras etiquetas asi se pueden referenciar/darle
+        algun estilo html, br sirve para saltos de linea, si hay un texto muy largo y quieres que baje de renglon,
+    pones br y baja, el numero de br(s) es equivalente a los espacios, 3 br =  espacios abajo -->
+    </p>
+
+    <a target="_blank" href="https://www.google.com"></a>
+    <!--a herf sirve como vinculo entre otras
+                                                            paginas y/o proyectos, target es para que pueda
+                                                            abrir el vinculo en otra pestaña y no recargar la 
+                                                            pagina que andamos creado -->
+
+    <!--en caso de que quieras mostrar imagenes usas img como etiqueta y src para llamar el link o ruta
+    de donde tengas tu imagen, puedes manipular su tamaño con width(ancho) y con heigth (alto) su unidad por
+    defecto son los pixeles-->
+    <img src="img/Pack SPA.png" height="400" width="400" alt="" />
+
+    <!--form distintos campos para recopilar info de usuario, label es como el nombre del campo en blanco
+    y es una etiqueta aparte, input es el cuadro que recolecta la info, para hacer que se seleccione en auto-
+    matico agrega for en el label con el mismo nombre del identificador (id) del input-->
+
+    <form action="/formulario.loqueuses" method="get">
+      <!--existe el post tambiemn, el get tiene un limite de 250 caracteres de url-->
+      <label for="Nombre"> Nombre </label>
+      <!--un cuadro(label) para(for) el id nombre, llamado nombre-->
+      <input
+        value="chanchito"
+        id="Nombre"
+        name="Nombre"
+        placeholder="Indica tu nombre"
+        type="text"
+      />
+      <!--name es como el el nombre con el cual el servidor
+        va reconocer la "variable"// place Holder es un indicativo de lo que el usuario debe poner y type es para indicar
+        lo que quieres colocar en el input o entrada de datos, como un boton de enviar o contraseña, altera su comportamiento
+        como seria text, checkbox, radio, submit, password, file-->
+      <br />
+
+      <label for="apellido"> apellido </label>
+      <input
+        value="feliz"
+        id="apelliddo"
+        placeholder="coloca tu apellido aqui"
+        name="apellido"
+        type="text"
+      />
+
+      <input type="number">
+      <input type="color">
+      <input type="date"> 
+      <input type="time">
+      <input type="search">
+      <input type="file" name="" id="">
+      <input type="range" name="" id="">
+      <input name="" id="" type="radio">
+      <input type="submit" name="" id="">
+      <input type="week" name="" id="">
+      <br />
+
+      <!--las propiedades ya vistas en el anterior dan la misma funcion, text area es un cuadrado "grande de texto
+            le puedes añadir cols y rows para darle tamño o quitarle"-->
+      <label for="cometarios">comentarios</label>
+      <textarea
+        placeholder="dejanos tu comentario"
+        name="comentario"
+        id="cometarios"
+        cols="30"
+        rows="10"
+      >
+este es un valor por defecto</textarea
+      >
+
+      <br />
+      <!--button es basicamente un boton en type puede ir boton, reset, submit-->
+      <button type="button">tipo boton</button>
+      <!--se especifica con el javascript la funcion que se quiere
+        hacer-->
+
+      <!--deja el formulario con los valores iniciales-->
+      <button type="reset">tipo reset</button>
+
+      <!--envia los datos a la ruta indicada en action y usa el metodo post-->
+      <button type="submit">tipo submit</button>
+
+      <!--dentri de ellos se puede colocar mas etiquetas-->
+
+      <br />
+    </form>
+
+    <ul>
+      <!--lista desordenada (lista de punticos), li es cada elemento y/o puntico de la lista-->
+      <li>elemento 1</li>
+      <li>elemeto 2</li>
+      <li>elemento3</li>
+      <li>elemento4</li>
+    </ul>
+
+    <hr />
+    <br />
+
+    <ol>
+      <!--lista ordenada (lista enumerada)// se pueden anidar listas dentro de listas  y darle un stylo de list
+    con la palabras style-->
+      <li value="50">elemento 1</li>
+      <li>elemeto 2</li>
+      <li>elemento3</li>
+      <li>elemento4</li>
+      <li>
+        <ol>
+          <li style="list-style-type: lower-alpha">sub elemento 1</li>
+          <li style="list-style-type: lower-alpha">sub elemento 2</li>
+          <li style="list-style-type: lower-alpha">sub elemento 3</li>
+        </ol>
+      </li>
+    </ol>
+    <hr />
+    <br />
+
+    <!--table es una tabla y tr es una fila dentro de la tabla//th es una cabecera//-->
+    <table>
+      <thead>
+        <tr>
+          <th>producto</th>
+          <th>precio</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Hola beats</td>
+          <!--elemento estandar-->
+          <td>gratis</td>
+        </tr>
+
+        <tr>
+          <td>chanchito feliz</td>
+          <!--elemento estandar-->
+          <td>19,90</td>
+        </tr>
+
+        <tr>
+          <td>chanchito feliz muy feliz</td>
+          <!--elemento estandar-->
+          <td>29,90</td>
+        </tr>
+      </tbody>
+
+      <!--tbody, thead, y tfoot, solo sirven para hacer que algunos exploradores reconozcan el "scroll"
+            en las tablas-->
+
+      <tfoot>
+        <td></td>
+        <td>total 49.80</td>
+      </tfoot>
+    </table>
+  </body>
+</html>
